@@ -1,0 +1,100 @@
+<?php
+session_start();
+if(!isset($_SESSION['uname']))
+{
+echo "<script>window.location.href='index.php';</script>";
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.top-left {
+    position: absolute;
+    top: 75px;
+    left:600px;
+}
+
+.container .content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+.bg {
+    background-image: url("rmk22.gif");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mySidenav a {
+    position: absolute;
+    left: -200px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 200px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+
+#about {
+    top: 40px;
+    background-color: #4CAF50;
+}
+
+#blog {
+    top: 100px;
+    background-color: #2196F3;
+}
+
+#projects {
+    top: 160px;
+    background-color: #f44336;
+}
+
+#contact {
+    top: 220px;
+    background-color: #555
+}
+#item {
+    top: 280px;
+    background-color: #A569BD
+}
+#call {
+    top: 340px;
+    background-color: #555
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="about">Purchace</a>
+  <a href="#" id="blog">Dispatch</a>
+  <a href="#" id="projects">Available stock</a>
+  <a href="#" id="contact">Dailywise report4</a>
+   <a href="#" id="item">Itemwise report</a>
+    <a href="#" id="call">Categorywise report</a>
+</div>
+<div style="margin-left:-5px;">
+<div class="container">
+  <img src="rmk22.gif" alt="Notebook" style="width:100%;">
+  <div class="top-left">
+  <h1>R.M.K Engineering College</h1>
+  </div>
+  <div class="content">
+    <center><h1>Stock Management</h1></center>
+     </div>
+
+</body>
+</html> 

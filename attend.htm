@@ -1,0 +1,42 @@
+<?php
+session_start();
+if(!isset($_SESSION['uname']))
+{
+echo "<script>window.location.href='index.php';</script>";
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attendance</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+<?php 
+include 'nav.php';
+?>
+
+<center><h3>Attendance details</h3></center>
+  <hr>
+  <form action="attendanceback.php" method="post">
+    <center><div class="form-inline">
+     <select name="college" class="form-control">
+	<option value="RMK">RMK</option>
+	<option value="RMD">RMD</option>
+	<option value="RMKCET">RMKCET</option>
+	</select>
+      <input type="text" class="form-control" name="date" placeholder="Select the date " >
+      <input type="text" class="form-control" name="count" placeholder="Students count">
+    </div><center>
+<br/>
+  <center><button type="button" class="btn btn-info">save</button></center>
+</div>
+</form>
+</body>
+</html>
